@@ -1,10 +1,12 @@
 {
-  "name": "my-v0-project",
+  "name": "sdg16-ai-platform",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "clean": "rm -rf .next node_modules package-lock.json pnpm-lock.yaml && npm install",
+    "dev": "next dev --turbo",
+    "force-refresh": "rm -rf .next && npm run clean && npm run dev",
     "lint": "next lint",
     "start": "next start"
   },
